@@ -1,0 +1,53 @@
+:host {
+    $max-tabs: 6;
+    max-width: calc(#{$max-tabs} * 232px);
+    display: flex;
+    border-radius: 5px 0 5px 0;
+    flex-direction: column;
+
+    .tabs {
+        width: 100%;
+        display: flex;
+    }
+
+    &.mobile {
+        flex-direction: row;
+
+        .tabs {
+            width: auto;
+           flex-direction: column; 
+        }
+
+        ::ng-deep gs-tab {
+            &.active {
+                &:after {
+                    position: absolute;
+                    bottom: 0;
+                    top: 0;
+                    height: 100%;
+                    right: 0;
+                    width: 4px;
+                    content: '';
+                    background-color: #3A0CA3;
+                }
+            }
+        }
+    }
+
+    .content {
+        width: 100%;
+        background-color: white;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    ::ng-deep gs-tab {
+        &:first-child {
+            border-top-left-radius: 5px;
+        }
+        &:last-child {
+            border-top-right-radius: 5px;
+            border-right: none;
+        }
+    }
+}

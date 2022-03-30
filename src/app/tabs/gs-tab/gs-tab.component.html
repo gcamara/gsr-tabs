@@ -1,0 +1,7 @@
+<label>{{label}}</label>
+<div class="badge" *ngIf="hasAlerts">
+    {{alerts}}
+</div>
+<ng-template #tabContent>
+    <ng-content *ngIf="active"></ng-content>
+</ng-template>

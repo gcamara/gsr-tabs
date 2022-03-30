@@ -1,0 +1,7 @@
+<div class="tabs">
+    <ng-content></ng-content>
+</div>
+<div class="content">
+    <ng-container [ngTemplateOutlet]="(activeTab$ | async)?.templateRef || defaultTemplate"></ng-container>
+    <ng-template #defaultTemplate></ng-template>
+</div>

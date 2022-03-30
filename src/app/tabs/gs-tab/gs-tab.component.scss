@@ -1,0 +1,58 @@
+:host {
+    min-width: 163px;
+    max-width: 232px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F3F4F5;
+    box-sizing: border-box;
+    padding: 16px 8px 12px 8px;
+    border-right: 1px #BABCBE solid;
+    cursor: pointer;
+    
+    label {
+        word-wrap: break-word;
+        color: black;
+        flex-grow: 1;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    &.active {
+        background-color: white;
+        position: relative; 
+
+        &:after {
+            position: absolute;
+            bottom: 0;
+            height: 4px;
+            width: 100%;
+            content: '';
+            background-color: #3A0CA3;
+        }
+
+        label {
+            //TODO: Change with variable
+            color: #3A0CA3;
+        }
+    }
+
+    &:hover {
+        background-color: #E9EBED;
+    }
+
+
+    .badge {
+        width: 26px;
+        height: 26px;
+        background-color: #B10625;
+        color: white;
+        font-weight: 600;
+        border-radius: 50%;
+        margin-left: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+    }
+}
